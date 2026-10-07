@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chennai Explorer | Discover Chennai</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION BAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span>🌴</span>
+
+        Chennai Explorer
+
+    </div>
+
+
+    <nav id="mainNav">
+
+        <a href="#home">Home</a>
+
+        <a href="#places">Places</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+
+    <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO CHENNAI
+        </p>
+
+
+        <h1>
+
+            Discover Chennai
+
+            <br>
+
+            <span>One Place at a Time.</span>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Explore the history, culture, beaches, temples,
+            museums, parks, shopping streets and hidden gems
+            of Chennai.
+
+        </p>
+
+
+        <a
+            href="#places"
+            class="hero-button"
+        >
+
+            Explore Places →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH BAR
+===================================================== -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search places, areas or categories..."
+            onkeyup="searchPlaces()"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORY SECTION
+===================================================== -->
+
+<section
+    class="categories"
+    id="categories"
+>
+
+    <div class="section-heading">
+
+        <p>
+            EXPLORE BY CATEGORY
+        </p>
+
+
+        <h2>
+            What are you interested in?
+        </h2>
+
+    </div>
+
+
+
+    <div class="category-container">
+
+
+        <button
+            onclick="filterCategory('All')"
+        >
+            🌆 All
+        </button>
+
+
+        <button
+            onclick="filterCategory('Beach')"
+        >
+            🌊 Beaches
+        </button>
+
+
+        <button
+            onclick="filterCategory('History')"
+        >
+            🏛️ History
+        </button>
+
+
+        <button
+            onclick="filterCategory('Temple')"
+        >
+            🛕 Temples
+        </button>
+
+
+        <button
+            onclick="filterCategory('Nature')"
+        >
+            🌳 Nature
+        </button>
+
+
+        <button
+            onclick="filterCategory('Museum')"
+        >
+            🎨 Museums
+        </button>
+
+
+        <button
+            onclick="filterCategory('Shopping')"
+        >
+            🛍️ Shopping
+        </button>
+
+
+        <button
+            onclick="filterCategory('Culture')"
+        >
+            🎭 Culture
+        </button>
+
+
+        <button
+            onclick="filterCategory('Church')"
+        >
+            ⛪ Churches
+        </button>
+
+
+        <button
+            onclick="filterCategory('Education')"
+        >
+            📚 Education
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PLACES SECTION
+===================================================== -->
+
+<section
+    class="places-section"
+    id="places"
+>
+
+
+    <div class="section-heading">
+
+        <p>
+            CHENNAI PLACES
+        </p>
+
+
+        <h2>
+            Explore Chennai
+        </h2>
+
+
+        <p class="description">
+
+            Discover the places, stories and experiences
+            that make Chennai unique.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         A-Z FILTER
+    ================================================= -->
+
+    <div class="alphabet">
+
+        <button onclick="filterLetter('All')">
+            ALL
+        </button>
+
+        <button onclick="filterLetter('A')">A</button>
+
+        <button onclick="filterLetter('B')">B</button>
+
+        <button onclick="filterLetter('C')">C</button>
+
+        <button onclick="filterLetter('D')">D</button>
+
+        <button onclick="filterLetter('E')">E</button>
+
+        <button onclick="filterLetter('F')">F</button>
+
+        <button onclick="filterLetter('G')">G</button>
+
+        <button onclick="filterLetter('H')">H</button>
+
+        <button onclick="filterLetter('I')">I</button>
+
+        <button onclick="filterLetter('J')">J</button>
+
+        <button onclick="filterLetter('K')">K</button>
+
+        <button onclick="filterLetter('L')">L</button>
+
+        <button onclick="filterLetter('M')">M</button>
+
+        <button onclick="filterLetter('N')">N</button>
+
+        <button onclick="filterLetter('O')">O</button>
+
+        <button onclick="filterLetter('P')">P</button>
+
+        <button onclick="filterLetter('Q')">Q</button>
+
+        <button onclick="filterLetter('R')">R</button>
+
+        <button onclick="filterLetter('S')">S</button>
+
+        <button onclick="filterLetter('T')">T</button>
+
+        <button onclick="filterLetter('U')">U</button>
+
+        <button onclick="filterLetter('V')">V</button>
+
+        <button onclick="filterLetter('W')">W</button>
+
+        <button onclick="filterLetter('Y')">Y</button>
+
+        <button onclick="filterLetter('Z')">Z</button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PLACE CARDS WILL APPEAR HERE
+    ================================================= -->
+
+    <div
+        class="places-grid"
+        id="placesGrid"
+    ></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PLACE DETAILS MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="placeModal"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            class="close-btn"
+            onclick="closeModal()"
+        >
+            ×
+        </button>
+
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Place image"
+        >
+
+
+        <div class="modal-body">
+
+
+            <span
+                class="modal-category"
+                id="modalCategory"
+            ></span>
+
+
+            <h2
+                id="modalName"
+            ></h2>
+
+
+            <p
+                class="location"
+                id="modalAddress"
+            ></p>
+
+
+            <div class="detail-section">
+
+                <h3>
+                    📖 History
+                </h3>
+
+                <p
+                    id="modalHistory"
+                ></p>
+
+            </div>
+
+
+
+            <div class="detail-section">
+
+                <h3>
+                    ✨ What makes it unique?
+                </h3>
+
+                <p
+                    id="modalUnique"
+                ></p>
+
+            </div>
+
+
+
+            <div class="detail-section">
+
+                <h3>
+                    🎯 Things to do
+                </h3>
+
+                <p
+                    id="modalThings"
+                ></p>
+
+            </div>
+
+
+
+            <a
+                id="mapLink"
+                href="#"
+                target="_blank"
+                class="map-button"
+            >
+
+                🗺️ View Location on Google Maps
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+
+<section
+    class="about"
+    id="about"
+>
+
+
+    <div class="about-content">
+
+
+        <p class="small-title">
+            ABOUT CHENNAI EXPLORER
+        </p>
+
+
+        <h2>
+            Discover the story behind Chennai.
+        </h2>
+
+
+        <p>
+
+            Chennai Explorer is a digital platform designed
+            to help visitors discover the places, culture,
+            history and experiences of Chennai.
+
+        </p>
+
+
+        <p>
+
+            From historic landmarks and ancient temples to
+            beaches, museums, shopping streets and green
+            spaces, Chennai Explorer brings Chennai's
+            attractions together in one place.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        🌴 Chennai Explorer
+
+    </div>
+
+
+    <p>
+        Discover Every Story. Explore Every Corner.
+    </p>
+
+
+    <p class="copyright">
+
+        © 2026 Chennai Explorer |
+        E-Commerce Academic Project
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT FILES
+
+     IMPORTANT:
+     places.js MUST come before script.js
+===================================================== -->
+
+<script src="places.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
