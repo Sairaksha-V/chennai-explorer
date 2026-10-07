@@ -12,7 +12,7 @@ const places = [
 
         address: "Kotturpuram, Chennai, Tamil Nadu",
 
-        image: "images/anna-library.jpg",
+        image: "anna-library.jpg",
 
         history:
             "Anna Centenary Library is a major public library in Chennai, inaugurated in 2010 and named after former Tamil Nadu Chief Minister C. N. Annadurai.",
@@ -40,7 +40,7 @@ const places = [
 
         address: "Besant Nagar, Chennai, Tamil Nadu",
 
-        image: "images/besant-nagar-beach.jpg",
+        image: "besant-nagar-beach.jpg",
 
         history:
             "Besant Nagar Beach, popularly known as Elliot's Beach, is located along the Bay of Bengal in south Chennai and is named after Edward Elliot.",
@@ -68,7 +68,7 @@ const places = [
 
         address: "Chetpet, Chennai, Tamil Nadu",
 
-        image: "images/chetpet-eco-park.jpg",
+        image: "chetpet-eco-park.jpg",
 
         history:
             "Chetpet Eco Park was developed as an urban recreational and ecological space around the former Chetpet lake area.",
@@ -97,7 +97,7 @@ const places = [
         address:
             "Muttukadu, East Coast Road, Chennai Metropolitan Region, Tamil Nadu",
 
-        image: "images/dakshinachitra.jpg",
+        image: "dakshinachitra.jpg",
 
         history:
             "Dakshinachitra is a living museum dedicated to the traditional architecture, crafts, lifestyles and cultural heritage of South India.",
@@ -125,7 +125,7 @@ const places = [
 
         address: "Besant Nagar, Chennai, Tamil Nadu",
 
-        image: "images/elliots-beach.jpg",
+        image: "elliots-beach.jpg",
 
         history:
             "Elliot's Beach is a popular beach in Besant Nagar and forms part of Chennai's coastline along the Bay of Bengal.",
@@ -153,7 +153,7 @@ const places = [
 
         address: "Rajaji Salai, Chennai, Tamil Nadu",
 
-        image: "images/fort-st-george.jpg",
+        image: "fort-st-george.jpg",
 
         history:
             "Fort St. George was established by the English East India Company in 1644 and became an important centre of British administration in South India.",
@@ -182,7 +182,7 @@ const places = [
         address:
             "Pantheon Road, Egmore, Chennai, Tamil Nadu",
 
-        image: "images/government-museum.jpg",
+        image: "government-museum.jpg",
 
         history:
             "The Government Museum in Chennai was established in the 19th century and has grown into one of India's important museums for archaeology, art and natural history.",
@@ -197,6 +197,7 @@ const places = [
             "https://www.google.com/maps/search/?api=1&query=Government+Museum+Egmore+Chennai"
     },
 
+
     {
         name: "Guindy National Park",
         category: "Nature",
@@ -205,7 +206,7 @@ const places = [
 
         address: "Guindy, Chennai, Tamil Nadu",
 
-        image: "images/guindy-national-park.jpg",
+        image: "guindy-national-park.jpg",
 
         history:
             "Guindy National Park is a protected natural area located within Chennai and forms an important green space in the city.",
@@ -233,7 +234,7 @@ const places = [
 
         address: "Mylapore, Chennai, Tamil Nadu",
 
-        image: "images/kapaleeshwarar-temple.jpg",
+        image: "kapaleeshwarar-temple.jpg",
 
         history:
             "Kapaleeshwarar Temple is an important Hindu temple in Mylapore dedicated to Lord Shiva and is closely associated with the cultural and religious history of Chennai.",
@@ -261,7 +262,7 @@ const places = [
 
         address: "Marina Beach Road, Chennai, Tamil Nadu",
 
-        image: "images/marina-beach.jpg",
+        image: "marina-beach.jpg",
 
         history:
             "Marina Beach is Chennai's famous urban beach along the Bay of Bengal and has been an important public landmark of the city for more than a century.",
@@ -289,7 +290,7 @@ const places = [
 
         address: "Santhome, Chennai, Tamil Nadu",
 
-        image: "images/san-thome-basilica.jpg",
+        image: "san-thome-basilica.jpg",
 
         history:
             "San Thome Basilica is a historic Roman Catholic basilica in Chennai traditionally associated with the tomb of Saint Thomas the Apostle.",
@@ -304,15 +305,17 @@ const places = [
             "https://www.google.com/maps/search/?api=1&query=San+Thome+Basilica+Chennai"
     },
 
+
     {
         name: "Semmozhi Poonga",
         category: "Nature",
         area: "Teynampet",
         letter: "S",
 
-        address: "Anna Salai, Teynampet, Chennai, Tamil Nadu",
+        address:
+            "Anna Salai, Teynampet, Chennai, Tamil Nadu",
 
-        image: "images/semmozhi-poonga.jpg",
+        image: "semmozhi-poonga.jpg",
 
         history:
             "Semmozhi Poonga is a botanical garden in Chennai created as an urban green space featuring a variety of plants and landscaped areas.",
@@ -340,7 +343,7 @@ const places = [
 
         address: "T. Nagar, Chennai, Tamil Nadu",
 
-        image: "images/t-nagar.jpg",
+        image: "t-nagar.jpg",
 
         history:
             "Thyagaraya Nagar, commonly known as T. Nagar, developed as a residential and commercial neighbourhood of Chennai and has become one of the city's major shopping districts.",
@@ -366,9 +369,10 @@ const places = [
         area: "Nungambakkam",
         letter: "V",
 
-        address: "Kodambakkam High Road, Nungambakkam, Chennai, Tamil Nadu",
+        address:
+            "Kodambakkam High Road, Nungambakkam, Chennai, Tamil Nadu",
 
-        image: "images/valluvar-kottam.jpg",
+        image: "valluvar-kottam.jpg",
 
         history:
             "Valluvar Kottam was built as a monument dedicated to the Tamil poet and philosopher Thiruvalluvar and was inaugurated in the 1970s.",
