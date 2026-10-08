@@ -1,390 +1,171 @@
 const places = [
 
-    // =========================
-    // A
-    // =========================
-
     {
         name: "Anna Centenary Library",
-        category: "Education",
-        area: "Kotturpuram",
         letter: "A",
-
+        category: "Education",
+        image: "images/anna-library.jpg",
         address: "Kotturpuram, Chennai, Tamil Nadu",
-
-        image: "anna-library.jpg",
-
-        history:
-            "Anna Centenary Library is a major public library in Chennai, inaugurated in 2010 and named after former Tamil Nadu Chief Minister C. N. Annadurai.",
-
-        unique:
-            "It is one of the largest libraries in South Asia and is known for its modern architecture, extensive collection and large reading spaces.",
-
-        things:
-            "Explore the library, use the reading areas, browse books and experience one of Chennai's important educational landmarks.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Anna+Centenary+Library+Chennai"
+        history: "Anna Centenary Library is one of the major public libraries in Chennai. It was established as a modern knowledge and learning centre and provides access to a large collection of books and educational resources.",
+        feature: "One of the largest libraries in Asia, known for its modern architecture and extensive collection of books and learning resources.",
+        things: "Read books, study, use the reading areas, explore educational resources and spend time in a peaceful learning environment.",
+        map: "https://www.google.com/maps/search/?api=1&query=Anna+Centenary+Library+Chennai"
     },
-
-
-    // =========================
-    // B
-    // =========================
 
     {
         name: "Besant Nagar Beach",
-        category: "Beach",
-        area: "Besant Nagar",
         letter: "B",
-
+        category: "Beach",
+        image: "images/besant-nagar-beach.jpg",
         address: "Besant Nagar, Chennai, Tamil Nadu",
-
-        image: "besant-nagar-beach.jpg",
-
-        history:
-            "Besant Nagar Beach, popularly known as Elliot's Beach, is located along the Bay of Bengal in south Chennai and is named after Edward Elliot.",
-
-        unique:
-            "The beach is known for its comparatively relaxed atmosphere, long shoreline and popular promenade.",
-
-        things:
-            "Enjoy the beach, watch the sunrise, walk along the shore, take photographs and explore nearby restaurants and landmarks.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Besant+Nagar+Beach+Chennai"
+        history: "Besant Nagar Beach is a popular coastal destination in South Chennai. It is a well-known place for residents and visitors to relax and enjoy the sea.",
+        feature: "A popular coastal destination with a pleasant atmosphere and promenade.",
+        things: "Enjoy the beach, walk along the shore, watch the sunset, take photographs and explore nearby food outlets.",
+        map: "https://www.google.com/maps/search/?api=1&query=Besant+Nagar+Beach+Chennai"
     },
-
-
-    // =========================
-    // C
-    // =========================
 
     {
         name: "Chetpet Eco Park",
-        category: "Nature",
-        area: "Chetpet",
         letter: "C",
-
+        category: "Nature",
+        image: "images/chetpet-eco-park.jpg",
         address: "Chetpet, Chennai, Tamil Nadu",
-
-        image: "chetpet-eco-park.jpg",
-
-        history:
-            "Chetpet Eco Park was developed as an urban recreational and ecological space around the former Chetpet lake area.",
-
-        unique:
-            "It provides a green recreational space within the city and includes a waterbody and facilities for visitors.",
-
-        things:
-            "Walk around the park, enjoy the greenery, take photographs and spend time outdoors.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Chetpet+Eco+Park+Chennai"
+        history: "Chetpet Eco Park is an urban ecological recreation space created to provide a green environment within Chennai. It combines recreational facilities with nature-oriented activities.",
+        feature: "An urban eco-park featuring greenery and recreational spaces in the middle of Chennai.",
+        things: "Enjoy nature, go for walks, spend time outdoors, take photographs and explore the park environment.",
+        map: "https://www.google.com/maps/search/?api=1&query=Chetpet+Eco+Park+Chennai"
     },
-
-
-    // =========================
-    // D
-    // =========================
 
     {
         name: "Dakshinachitra",
-        category: "Culture",
-        area: "Muttukadu",
         letter: "D",
-
-        address:
-            "Muttukadu, East Coast Road, Chennai Metropolitan Region, Tamil Nadu",
-
-        image: "dakshinachitra.jpg",
-
-        history:
-            "Dakshinachitra is a living museum dedicated to the traditional architecture, crafts, lifestyles and cultural heritage of South India.",
-
-        unique:
-            "The museum features traditional houses and cultural displays representing different regions of South India.",
-
-        things:
-            "Explore traditional houses, observe handicrafts, learn about South Indian lifestyles and experience cultural activities.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Dakshinachitra+Chennai"
+        category: "Culture",
+        image: "images/dakshinachitra.jpg",
+        address: "Muttukadu, East Coast Road, Chennai, Tamil Nadu",
+        history: "Dakshinachitra is a living heritage museum that presents traditional architecture, lifestyles, crafts and cultural practices from different parts of South India.",
+        feature: "Traditional houses and cultural exhibits representing the heritage of South India.",
+        things: "Explore traditional houses, observe handicrafts, learn about South Indian culture, attend cultural activities and take photographs.",
+        map: "https://www.google.com/maps/search/?api=1&query=Dakshinachitra+Chennai"
     },
-
-
-    // =========================
-    // E
-    // =========================
 
     {
         name: "Elliot's Beach",
-        category: "Beach",
-        area: "Besant Nagar",
         letter: "E",
-
+        category: "Beach",
+        image: "images/elliots-beach.jpg",
         address: "Besant Nagar, Chennai, Tamil Nadu",
-
-        image: "elliots-beach.jpg",
-
-        history:
-            "Elliot's Beach is a popular beach in Besant Nagar and forms part of Chennai's coastline along the Bay of Bengal.",
-
-        unique:
-            "It is associated with the Besant Nagar waterfront and is generally known for its comparatively calm atmosphere.",
-
-        things:
-            "Walk along the beach, enjoy the sea breeze, watch the sunrise and explore nearby cafés and landmarks.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Elliots+Beach+Chennai"
+        history: "Elliot's Beach is a popular beach in Besant Nagar and is traditionally associated with the southern end of Chennai's coastal stretch.",
+        feature: "Known for its comparatively peaceful atmosphere and the Karl Schmidt Memorial located near the beach.",
+        things: "Walk along the beach, enjoy the sea view, watch the sunset, relax and visit nearby landmarks.",
+        map: "https://www.google.com/maps/search/?api=1&query=Elliots+Beach+Chennai"
     },
-
-
-    // =========================
-    // F
-    // =========================
 
     {
         name: "Fort St. George",
-        category: "History",
-        area: "Rajaji Salai",
         letter: "F",
-
+        category: "History",
+        image: "images/fort-st-george.jpg",
         address: "Rajaji Salai, Chennai, Tamil Nadu",
-
-        image: "fort-st-george.jpg",
-
-        history:
-            "Fort St. George was established by the English East India Company in 1644 and became an important centre of British administration in South India.",
-
-        unique:
-            "It is one of the most historically significant colonial-era landmarks in Chennai and houses important government and heritage buildings.",
-
-        things:
-            "Explore the historic fort area, learn about colonial history and visit the associated museum and heritage buildings where accessible.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Fort+St+George+Chennai"
+        history: "Fort St. George was established by the English East India Company in the 17th century. It became an important centre of British administration and played a significant role in the history of Chennai.",
+        feature: "An important historic fort complex associated with the colonial history of Chennai.",
+        things: "Explore the historic complex, visit the museum and St. Mary's Church, and learn about Chennai's colonial history.",
+        map: "https://www.google.com/maps/search/?api=1&query=Fort+St+George+Chennai"
     },
-
-
-    // =========================
-    // G
-    // =========================
 
     {
         name: "Government Museum",
-        category: "Museum",
-        area: "Egmore",
         letter: "G",
-
-        address:
-            "Pantheon Road, Egmore, Chennai, Tamil Nadu",
-
-        image: "government-museum.jpg",
-
-        history:
-            "The Government Museum in Chennai was established in the 19th century and has grown into one of India's important museums for archaeology, art and natural history.",
-
-        unique:
-            "The museum is especially known for its archaeological collections, South Indian bronzes and heritage buildings.",
-
-        things:
-            "Explore archaeological galleries, sculptures, bronzes, art collections and other historical exhibits.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Government+Museum+Egmore+Chennai"
+        category: "Museum",
+        image: "images/government-museum.jpg",
+        address: "Egmore, Chennai, Tamil Nadu",
+        history: "The Government Museum in Chennai was established in the 19th century and houses collections covering archaeology, anthropology, art and natural history.",
+        feature: "Famous for its archaeological and art collections, including important South Indian bronzes.",
+        things: "Explore galleries, view historical artefacts, study sculptures and learn about Indian art and archaeology.",
+        map: "https://www.google.com/maps/search/?api=1&query=Government+Museum+Egmore+Chennai"
     },
-
 
     {
         name: "Guindy National Park",
-        category: "Nature",
-        area: "Guindy",
         letter: "G",
-
+        category: "Nature",
+        image: "images/guindy-national-park.jpg",
         address: "Guindy, Chennai, Tamil Nadu",
-
-        image: "guindy-national-park.jpg",
-
-        history:
-            "Guindy National Park is a protected natural area located within Chennai and forms an important green space in the city.",
-
-        unique:
-            "It is notable for being a national park located within a major metropolitan city.",
-
-        things:
-            "Explore the natural surroundings, observe wildlife and learn about the park's biodiversity.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Guindy+National+Park+Chennai"
+        history: "Guindy National Park is a protected green area within Chennai and is notable for preserving natural habitat inside a major metropolitan city.",
+        feature: "One of the few national parks located within a major Indian city.",
+        things: "Observe wildlife, explore nature trails, enjoy greenery and learn about local biodiversity.",
+        map: "https://www.google.com/maps/search/?api=1&query=Guindy+National+Park+Chennai"
     },
-
-
-    // =========================
-    // K
-    // =========================
 
     {
         name: "Kapaleeshwarar Temple",
-        category: "Temple",
-        area: "Mylapore",
         letter: "K",
-
+        category: "Temple",
+        image: "images/kapaleeshwarar-temple.jpg",
         address: "Mylapore, Chennai, Tamil Nadu",
-
-        image: "kapaleeshwarar-temple.jpg",
-
-        history:
-            "Kapaleeshwarar Temple is an important Hindu temple in Mylapore dedicated to Lord Shiva and is closely associated with the cultural and religious history of Chennai.",
-
-        unique:
-            "The temple is famous for its colourful Dravidian architecture, detailed sculptures and prominent gopuram.",
-
-        things:
-            "Explore the temple architecture, observe the sculptures and experience the cultural atmosphere of historic Mylapore.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Kapaleeshwarar+Temple+Chennai"
+        history: "Kapaleeshwarar Temple is an important historic Hindu temple in Mylapore dedicated to Lord Shiva. The temple is strongly associated with the cultural and religious heritage of Chennai.",
+        feature: "Known for its traditional Dravidian architecture and richly decorated gopuram.",
+        things: "Visit the temple, observe the architecture, explore Mylapore and experience the surrounding cultural atmosphere.",
+        map: "https://www.google.com/maps/search/?api=1&query=Kapaleeshwarar+Temple+Chennai"
     },
-
-
-    // =========================
-    // M
-    // =========================
 
     {
         name: "Marina Beach",
-        category: "Beach",
-        area: "Marina",
         letter: "M",
-
-        address: "Marina Beach Road, Chennai, Tamil Nadu",
-
-        image: "marina-beach.jpg",
-
-        history:
-            "Marina Beach is Chennai's famous urban beach along the Bay of Bengal and has been an important public landmark of the city for more than a century.",
-
-        unique:
-            "It is one of the longest urban beaches in India and is known for its wide sandy shoreline and lively promenade.",
-
-        things:
-            "Watch the sunrise, walk along the beach, enjoy local snacks, take photographs and explore nearby landmarks.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Marina+Beach+Chennai"
+        category: "Beach",
+        image: "images/marina-beach.jpg",
+        address: "Marina Beach, Chennai, Tamil Nadu",
+        history: "Marina Beach is one of Chennai's most famous landmarks and forms a major part of the city's coastal identity.",
+        feature: "One of the longest urban beaches in the world and a major landmark of Chennai.",
+        things: "Walk along the beach, watch the sunrise, enjoy local snacks, take photographs and visit nearby landmarks.",
+        map: "https://www.google.com/maps/search/?api=1&query=Marina+Beach+Chennai"
     },
-
-
-    // =========================
-    // S
-    // =========================
 
     {
         name: "San Thome Basilica",
-        category: "Church",
-        area: "Santhome",
         letter: "S",
-
+        category: "Church",
+        image: "images/san-thome-basilica.jpg",
         address: "Santhome, Chennai, Tamil Nadu",
-
-        image: "san-thome-basilica.jpg",
-
-        history:
-            "San Thome Basilica is a historic Roman Catholic basilica in Chennai traditionally associated with the tomb of Saint Thomas the Apostle.",
-
-        unique:
-            "It is one of the important Christian pilgrimage sites in India and is built in a Neo-Gothic architectural style.",
-
-        things:
-            "Explore the basilica, observe the architecture and visit the associated historical and religious spaces.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=San+Thome+Basilica+Chennai"
+        history: "San Thome Basilica is a historic Christian church in Chennai and is traditionally associated with the tomb of Saint Thomas the Apostle.",
+        feature: "One of the important basilicas traditionally associated with the burial site of an apostle.",
+        things: "Visit the basilica, observe the architecture, explore the museum and experience the historic surroundings.",
+        map: "https://www.google.com/maps/search/?api=1&query=San+Thome+Basilica+Chennai"
     },
-
 
     {
         name: "Semmozhi Poonga",
-        category: "Nature",
-        area: "Teynampet",
         letter: "S",
-
-        address:
-            "Anna Salai, Teynampet, Chennai, Tamil Nadu",
-
-        image: "semmozhi-poonga.jpg",
-
-        history:
-            "Semmozhi Poonga is a botanical garden in Chennai created as an urban green space featuring a variety of plants and landscaped areas.",
-
-        unique:
-            "It provides a botanical and recreational environment in the middle of the city.",
-
-        things:
-            "Walk through the gardens, observe plants, relax in the green surroundings and take photographs.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Semmozhi+Poonga+Chennai"
+        category: "Nature",
+        image: "images/semmozhi-poonga.jpg",
+        address: "Teynampet, Chennai, Tamil Nadu",
+        history: "Semmozhi Poonga is a botanical garden in Chennai developed as a green recreational space in the heart of the city.",
+        feature: "A botanical garden with a wide variety of plants and landscaped green spaces.",
+        things: "Walk through the garden, observe plants, relax in the greenery and take photographs.",
+        map: "https://www.google.com/maps/search/?api=1&query=Semmozhi+Poonga+Chennai"
     },
-
-
-    // =========================
-    // T
-    // =========================
 
     {
         name: "T. Nagar",
-        category: "Shopping",
-        area: "T. Nagar",
         letter: "T",
-
+        category: "Shopping",
+        image: "images/t-nagar.jpg",
         address: "T. Nagar, Chennai, Tamil Nadu",
-
-        image: "t-nagar.jpg",
-
-        history:
-            "Thyagaraya Nagar, commonly known as T. Nagar, developed as a residential and commercial neighbourhood of Chennai and has become one of the city's major shopping districts.",
-
-        unique:
-            "It is particularly famous for jewellery, silk sarees, textiles, shopping streets and busy commercial areas.",
-
-        things:
-            "Shop for sarees and jewellery, explore Ranganathan Street and Pondy Bazaar and experience Chennai's busy shopping culture.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=T+Nagar+Chennai"
+        history: "Thyagaraya Nagar, commonly known as T. Nagar, developed into one of Chennai's major commercial and shopping districts.",
+        feature: "One of Chennai's most famous shopping destinations, particularly known for jewellery, clothing and traditional products.",
+        things: "Shop for clothing, jewellery and accessories, explore commercial streets and experience Chennai's busy retail culture.",
+        map: "https://www.google.com/maps/search/?api=1&query=T+Nagar+Chennai"
     },
-
-
-    // =========================
-    // V
-    // =========================
 
     {
         name: "Valluvar Kottam",
-        category: "History",
-        area: "Nungambakkam",
         letter: "V",
-
-        address:
-            "Kodambakkam High Road, Nungambakkam, Chennai, Tamil Nadu",
-
-        image: "valluvar-kottam.jpg",
-
-        history:
-            "Valluvar Kottam was built as a monument dedicated to the Tamil poet and philosopher Thiruvalluvar and was inaugurated in the 1970s.",
-
-        unique:
-            "The monument is designed in the form of a large temple chariot and commemorates Thiruvalluvar and the literary heritage of Tamil Nadu.",
-
-        things:
-            "Explore the architecture, view the Thiruvalluvar monument and learn about Tamil literary heritage.",
-
-        map:
-            "https://www.google.com/maps/search/?api=1&query=Valluvar+Kottam+Chennai"
+        category: "History",
+        image: "images/valluvar-kottam.jpg",
+        address: "Nungambakkam, Chennai, Tamil Nadu",
+        history: "Valluvar Kottam is a cultural monument dedicated to the Tamil poet and philosopher Thiruvalluvar and his famous work, the Thirukkural.",
+        feature: "A large monument inspired by the traditional temple chariot and dedicated to Thiruvalluvar.",
+        things: "Explore the monument, view the Thirukkural inscriptions and learn about Tamil literature and culture.",
+        map: "https://www.google.com/maps/search/?api=1&query=Valluvar+Kottam+Chennai"
     }
 
 ];
