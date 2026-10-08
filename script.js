@@ -1,527 +1,302 @@
-/* =====================================================
-   CHENNAI EXPLORER
-   WEBSITE FUNCTIONS
-===================================================== */
+// ===============================
+// CHENNAI EXPLORER - MAIN SCRIPT
+// ===============================
+
+// Get elements
+const placesContainer = document.getElementById("placesContainer");
+const placeModal = document.getElementById("placeModal");
+
+const modalImage = document.getElementById("modalImage");
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalAddress = document.getElementById("modalAddress");
+const modalHistory = document.getElementById("modalHistory");
+const modalFeature = document.getElementById("modalFeature");
+const modalThings = document.getElementById("modalThings");
+const modalMap = document.getElementById("modalMap");
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
-const grid =
-    document.getElementById("placesGrid");
-
-
-let currentPlaces = places;
-
-
-
-/* =====================================================
-   DISPLAY PLACES
-===================================================== */
+// ===============================
+// DISPLAY PLACES
+// ===============================
 
 function displayPlaces(placeList) {
 
-    grid.innerHTML = "";
+    if (!placesContainer) {
+        return;
+    }
 
-
-    /* No results */
+    placesContainer.innerHTML = "";
 
     if (placeList.length === 0) {
 
-        grid.innerHTML = `
-
+        placesContainer.innerHTML = `
             <div class="no-results">
-
-                <h2>
-                    😔 No places found
-                </h2>
-
-                <p>
-                    Try another search or category.
-                </p>
-
+                <h3>No places found</h3>
+                <p>Try another search or category.</p>
             </div>
-
         `;
 
         return;
     }
 
+    placeList.forEach((place, index) => {
 
+        const card = document.createElement("div");
 
-    /* Create cards */
+        card.className = "place-card";
 
-    placeList.forEach(
-        (place, index) => {
-
-
-            const card =
-                document.createElement("div");
-
-
-            card.className =
-                "place-card";
-
-
-            card.innerHTML = `
-
-                <img
-                    src="${place.image}"
+        card.innerHTML = `
+            <div class="place-image-wrapper">
+                <img 
+                    src="${place.image}" 
                     alt="${place.name}"
-                    loading="lazy"
+                    class="place-image"
+                    onerror="this.style.display='none'; this.parentElement.classList.add('image-error');"
                 >
 
+                <span class="place-letter">
+                    ${place.letter}
+                </span>
+            </div>
 
-                <div class="card-body">
+            <div class="place-info">
 
+                <span class="place-category">
+                    ${place.category}
+                </span>
 
-                    <div class="card-category">
+                <h3>
+                    ${place.name}
+                </h3>
 
-                        ${place.category}
+                <p class="place-address">
+                    📍 ${place.address}
+                </p>
 
-                    </div>
+                <button 
+                    class="view-button"
+                    onclick="openPlace(${index})"
+                >
+                    View Details →
+                </button>
 
+            </div>
+        `;
 
-                    <h3>
-
-                        ${place.name}
-
-                    </h3>
-
-
-                    <p class="card-address">
-
-                        📍 ${place.address}
-
-                    </p>
-
-
-                    <button
-
-                        class="card-button"
-
-                        onclick="openPlace(${index})"
-
-                    >
-
-                        Explore →
-
-                    </button>
-
-
-                </div>
-
-            `;
-
-
-            grid.appendChild(card);
-
-        }
-    );
-
+        placesContainer.appendChild(card);
+    });
 }
 
 
-
-/* =====================================================
-   OPEN PLACE DETAILS
-===================================================== */
+// ===============================
+// OPEN PLACE MODAL
+// ===============================
 
 function openPlace(index) {
 
+    const place = places[index];
 
-    const place =
-        currentPlaces[index];
+    if (!placeModal || !place) {
+        return;
+    }
 
+    modalImage.src = place.image;
+    modalImage.alt = place.name;
 
-    document.getElementById(
-        "modalImage"
-    ).src = place.image;
+    modalCategory.textContent = place.category;
+    modalTitle.textContent = place.name;
+    modalAddress.textContent = "📍 " + place.address;
+    modalHistory.textContent = place.history;
+    modalFeature.textContent = place.feature;
+    modalThings.textContent = place.things;
 
+    modalMap.href = place.map;
 
-    document.getElementById(
-        "modalImage"
-    ).alt = place.name;
+    placeModal.classList.add("active");
 
-
-    document.getElementById(
-        "modalCategory"
-    ).textContent =
-        place.category;
-
-
-    document.getElementById(
-        "modalName"
-    ).textContent =
-        place.name;
-
-
-    document.getElementById(
-        "modalAddress"
-    ).textContent =
-        "📍 " + place.address;
-
-
-    document.getElementById(
-        "modalHistory"
-    ).textContent =
-        place.history;
-
-
-    document.getElementById(
-        "modalUnique"
-    ).textContent =
-        place.unique;
-
-
-    document.getElementById(
-        "modalThings"
-    ).textContent =
-        place.things;
-
-
-    document.getElementById(
-        "mapLink"
-    ).href =
-        place.map;
-
-
-    document.getElementById(
-        "placeModal"
-    ).style.display =
-        "block";
-
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
 
 
-
-/* =====================================================
-   CLOSE MODAL
-===================================================== */
+// ===============================
+// CLOSE MODAL
+// ===============================
 
 function closeModal() {
 
+    if (!placeModal) {
+        return;
+    }
 
-    document.getElementById(
-        "placeModal"
-    ).style.display =
-        "none";
+    placeModal.classList.remove("active");
 
-
-    document.body.style.overflow =
-        "auto";
-
+    document.body.style.overflow = "auto";
 }
 
 
+// Close modal when clicking outside
+if (placeModal) {
 
-/* =====================================================
-   CLOSE MODAL WHEN CLICKING OUTSIDE
-===================================================== */
+    placeModal.addEventListener("click", function(event) {
 
-window.onclick =
-    function(event) {
-
-
-        const modal =
-            document.getElementById(
-                "placeModal"
-            );
-
-
-        if (
-            event.target === modal
-        ) {
-
+        if (event.target === placeModal) {
             closeModal();
-
         }
 
-    };
+    });
+}
 
 
+// Close modal with Escape key
+document.addEventListener("keydown", function(event) {
 
-/* =====================================================
-   SEARCH PLACES
-===================================================== */
+    if (event.key === "Escape") {
+        closeModal();
+    }
+
+});
+
+
+// ===============================
+// SEARCH PLACES
+// ===============================
 
 function searchPlaces() {
 
+    const searchInput = document.getElementById("searchInput");
 
-    const search =
-        document
-            .getElementById(
-                "searchInput"
-            )
-            .value
-            .toLowerCase()
-            .trim();
+    if (!searchInput) {
+        return;
+    }
 
+    const searchText = searchInput.value.toLowerCase().trim();
 
-    const results =
-        places.filter(
-            (place) => {
+    const filteredPlaces = places.filter(place => {
 
-
-                return (
-
-                    place.name
-                        .toLowerCase()
-                        .includes(search)
-
-
-                    ||
-
-                    place.category
-                        .toLowerCase()
-                        .includes(search)
-
-
-                    ||
-
-                    place.area
-                        .toLowerCase()
-                        .includes(search)
-
-
-                    ||
-
-                    place.address
-                        .toLowerCase()
-                        .includes(search)
-
-
-                    ||
-
-                    place.history
-                        .toLowerCase()
-                        .includes(search)
-
-                );
-
-            }
+        return (
+            place.name.toLowerCase().includes(searchText) ||
+            place.category.toLowerCase().includes(searchText) ||
+            place.address.toLowerCase().includes(searchText)
         );
 
+    });
 
-    currentPlaces =
-        results;
-
-
-    displayPlaces(
-        results
-    );
-
+    displayPlaces(filteredPlaces);
 }
 
 
+// Search when pressing Enter
+const searchInput = document.getElementById("searchInput");
 
-/* =====================================================
-   CATEGORY FILTER
-===================================================== */
+if (searchInput) {
 
-function filterCategory(
-    category
-) {
+    searchInput.addEventListener("keyup", function(event) {
 
+        if (event.key === "Enter") {
+            searchPlaces();
+        }
 
-    document.getElementById(
-        "searchInput"
-    ).value = "";
-
-
-    let results;
-
-
-    if (
-        category === "All"
-    ) {
-
-        results =
-            places;
-
-    }
-
-    else {
-
-        results =
-            places.filter(
-                (place) =>
-                    place.category === category
-            );
-
-    }
-
-
-    currentPlaces =
-        results;
-
-
-    displayPlaces(
-        results
-    );
-
-
-    document.getElementById(
-        "places"
-    ).scrollIntoView({
-        behavior: "smooth"
     });
 
 }
 
 
+// ===============================
+// CATEGORY FILTER
+// ===============================
 
-/* =====================================================
-   A-Z FILTER
-===================================================== */
+function filterCategory(category, button) {
 
-function filterLetter(
-    letter
-) {
+    const buttons = document.querySelectorAll(".filter-btn");
 
-
-    document.getElementById(
-        "searchInput"
-    ).value = "";
-
-
-    let results;
-
-
-    if (
-        letter === "All"
-    ) {
-
-        results =
-            places;
-
-    }
-
-    else {
-
-        results =
-            places.filter(
-                (place) =>
-                    place.letter === letter
-            );
-
-    }
-
-
-    currentPlaces =
-        results;
-
-
-    displayPlaces(
-        results
-    );
-
-
-    document.getElementById(
-        "places"
-    ).scrollIntoView({
-        behavior: "smooth"
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
     });
 
+    if (button) {
+        button.classList.add("active");
+    }
+
+    if (category === "All") {
+
+        displayPlaces(places);
+
+    } else {
+
+        const filteredPlaces = places.filter(place => {
+
+            return place.category === category;
+
+        });
+
+        displayPlaces(filteredPlaces);
+    }
 }
 
 
+// ===============================
+// ALPHABET FILTER
+// ===============================
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+function filterLetter(letter, button) {
+
+    const alphabetButtons = document.querySelectorAll(".alphabet button");
+
+    alphabetButtons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+    const filteredPlaces = places.filter(place => {
+
+        return place.letter === letter;
+
+    });
+
+    displayPlaces(filteredPlaces);
+}
+
+
+// ===============================
+// MOBILE MENU
+// ===============================
 
 function toggleMenu() {
 
+    const navMenu = document.getElementById("navMenu");
 
-    const nav =
-        document.getElementById(
-            "mainNav"
-        );
-
-
-    if (
-        nav.style.display === "flex"
-    ) {
-
-        nav.style.display =
-            "none";
-
+    if (!navMenu) {
+        return;
     }
 
-    else {
-
-        nav.style.display =
-            "flex";
-
-
-        nav.style.flexDirection =
-            "column";
-
-
-        nav.style.position =
-            "absolute";
-
-
-        nav.style.top =
-            "75px";
-
-
-        nav.style.right =
-            "0";
-
-
-        nav.style.background =
-            "white";
-
-
-        nav.style.padding =
-            "20px";
-
-
-        nav.style.width =
-            "220px";
-
-
-        nav.style.boxShadow =
-            "0 5px 20px rgba(0,0,0,0.15)";
-
-    }
-
+    navMenu.classList.toggle("show");
 }
 
 
+// Close mobile menu after clicking a link
+const navLinks = document.querySelectorAll(".nav-menu a");
 
-/* =====================================================
-   ESCAPE KEY CLOSES MODAL
-===================================================== */
+navLinks.forEach(link => {
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+    link.addEventListener("click", function() {
 
-        if (
-            event.key === "Escape"
-        ) {
+        const navMenu = document.getElementById("navMenu");
 
-            closeModal();
-
+        if (navMenu) {
+            navMenu.classList.remove("show");
         }
 
-    }
-);
+    });
+
+});
 
 
+// ===============================
+// INITIAL DISPLAY
+// ===============================
 
-/* =====================================================
-   INITIAL WEBSITE LOAD
-===================================================== */
-
-displayPlaces(
-    places
-);
+displayPlaces(places);
