@@ -5,14 +5,23 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Chennai Explorer | Discover Chennai</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Chennai Explorer is a digital tourism platform to discover popular places, experiences and attractions in Chennai."
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -20,84 +29,86 @@
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVIGATION BAR
+===================================================== -->
 
 <header class="navbar">
 
-    <div class="logo">
-        Chennai <span>Explorer</span>
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            Chennai Explorer
+        </a>
+
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <nav>
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#places">Places</a>
+                </li>
+
+                <li>
+                    <a href="#business">Business Model</a>
+                </li>
+
+                <li>
+                    <a href="#revenue">Revenue</a>
+                </li>
+
+                <li>
+                    <a href="#security">Privacy &amp; Security</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </div>
-
-
-    <nav id="navMenu">
-
-        <a href="#home">Home</a>
-
-        <a href="#places">Places</a>
-
-        <a href="#business">Business Model</a>
-
-        <a href="#revenue">Revenue</a>
-
-        <a href="#security">Privacy & Security</a>
-
-        <a href="#about">About</a>
-
-    </nav>
-
-
-    <button
-        class="menu-btn"
-        onclick="toggleMenu()"
-    >
-        ☰
-    </button>
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
 
-<section
-    class="hero"
-    id="home"
->
+<section class="hero" id="home">
 
     <div class="hero-content">
 
-        <p class="hero-small">
-            WELCOME TO CHENNAI
-        </p>
-
-
         <h1>
-
             Discover Chennai
-
-            <br>
-
-            <span>
-                One Place at a Time.
-            </span>
-
         </h1>
 
-
         <p>
-
-            Explore beaches, heritage sites, temples,
-            museums, shopping destinations, nature spots
-            and cultural attractions across Chennai.
-
+            Explore the culture, history, beaches, food,
+            shopping and beautiful places of Chennai
+            through one convenient digital platform.
         </p>
 
-
-        <a
-            href="#places"
-            class="hero-btn"
-        >
-            Explore Places
+        <a href="#places" class="hero-button">
+            Explore Places →
         </a>
 
     </div>
@@ -106,34 +117,22 @@
 
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
 
 <section class="intro-section">
 
-    <div class="section-heading">
+    <h2 class="section-title">
+        Welcome to Chennai Explorer
+    </h2>
 
-        <p class="section-label">
-            OUR PLATFORM
-        </p>
-
-
-        <h2>
-            Discover. Explore. Experience.
-        </h2>
-
-
-        <p>
-
-            Chennai Explorer is a tourism-focused
-            e-commerce platform concept designed to
-            help users discover interesting places and
-            experiences in Chennai through one convenient
-            digital platform.
-
-        </p>
-
-    </div>
-
+    <p class="section-subtitle">
+        Chennai Explorer is a tourism-focused e-commerce
+        platform concept designed to help users discover
+        interesting places and experiences in Chennai
+        through one convenient digital platform.
+    </p>
 
 
     <div class="intro-cards">
@@ -146,12 +145,13 @@
             </div>
 
             <h3>
-                Discover Places
+                Discover
             </h3>
 
             <p>
-                Find popular and interesting destinations
-                across Chennai.
+                Find famous tourist attractions,
+                historical landmarks, beaches,
+                temples, museums and more.
             </p>
 
         </div>
@@ -161,16 +161,17 @@
         <div class="intro-card">
 
             <div class="icon">
-                🔎
+                🧭
             </div>
 
             <h3>
-                Easy Exploration
+                Explore
             </h3>
 
             <p>
-                Search and filter destinations according
-                to your interests.
+                Explore different categories of
+                destinations and learn about their
+                history, features and activities.
             </p>
 
         </div>
@@ -180,16 +181,17 @@
         <div class="intro-card">
 
             <div class="icon">
-                🗺️
+                💻
             </div>
 
             <h3>
-                Plan Your Visit
+                Connect
             </h3>
 
             <p>
-                View important information and access
-                location directions.
+                Create a digital platform connecting
+                visitors with local tourism businesses
+                and experiences.
             </p>
 
         </div>
@@ -201,215 +203,206 @@
 
 
 
-<!-- ================= PLACES ================= -->
+<!-- =====================================================
+     PLACES SECTION
+===================================================== -->
 
-<section
-    class="places-section"
-    id="places"
->
+<section class="places-section" id="places">
 
-    <div class="section-heading">
-
-        <p class="section-label">
-            EXPLORE CHENNAI
-        </p>
+    <div class="places-inner">
 
 
-        <h2>
-            Popular Places
-        </h2>
+        <div class="places-heading">
+
+            <h2>
+                Popular Places
+            </h2>
+
+            <p>
+                Explore Chennai's famous beaches,
+                heritage locations, temples,
+                museums, shopping areas and more.
+            </p>
+
+        </div>
 
 
-        <p>
 
-            Explore Chennai's famous beaches,
-            heritage locations, temples, museums,
-            shopping areas and more.
+        <!-- SEARCH -->
 
-        </p>
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a place..."
+                aria-label="Search for a place"
+            >
+
+            <button
+                class="search-button"
+                onclick="searchPlaces()"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+
+        <!-- CATEGORY FILTER -->
+
+        <div class="filter-container">
+
+            <button
+                class="filter-btn active"
+                onclick="filterCategory('All', this)"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Beach', this)"
+            >
+                Beach
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('History', this)"
+            >
+                History
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Temple', this)"
+            >
+                Temple
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Nature', this)"
+            >
+                Nature
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Museum', this)"
+            >
+                Museum
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Shopping', this)"
+            >
+                Shopping
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Culture', this)"
+            >
+                Culture
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Church', this)"
+            >
+                Church
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('Education', this)"
+            >
+                Education
+            </button>
+
+        </div>
+
+
+
+        <!-- ALPHABET FILTER -->
+
+        <div class="alphabet">
+
+            <button
+                class="active"
+                onclick="displayPlaces(places); document.querySelectorAll('.alphabet button').forEach(b => b.classList.remove('active')); this.classList.add('active');"
+            >
+                All
+            </button>
+
+            <button onclick="filterLetter('A', this)">A</button>
+            <button onclick="filterLetter('B', this)">B</button>
+            <button onclick="filterLetter('C', this)">C</button>
+            <button onclick="filterLetter('D', this)">D</button>
+            <button onclick="filterLetter('E', this)">E</button>
+            <button onclick="filterLetter('F', this)">F</button>
+            <button onclick="filterLetter('G', this)">G</button>
+            <button onclick="filterLetter('H', this)">H</button>
+            <button onclick="filterLetter('I', this)">I</button>
+            <button onclick="filterLetter('J', this)">J</button>
+            <button onclick="filterLetter('K', this)">K</button>
+            <button onclick="filterLetter('L', this)">L</button>
+            <button onclick="filterLetter('M', this)">M</button>
+            <button onclick="filterLetter('N', this)">N</button>
+            <button onclick="filterLetter('O', this)">O</button>
+            <button onclick="filterLetter('P', this)">P</button>
+            <button onclick="filterLetter('Q', this)">Q</button>
+            <button onclick="filterLetter('R', this)">R</button>
+            <button onclick="filterLetter('S', this)">S</button>
+            <button onclick="filterLetter('T', this)">T</button>
+            <button onclick="filterLetter('U', this)">U</button>
+            <button onclick="filterLetter('V', this)">V</button>
+            <button onclick="filterLetter('W', this)">W</button>
+            <button onclick="filterLetter('X', this)">X</button>
+            <button onclick="filterLetter('Y', this)">Y</button>
+            <button onclick="filterLetter('Z', this)">Z</button>
+
+        </div>
+
+
+
+        <!-- PLACE CARDS ARE CREATED BY JAVASCRIPT -->
+
+        <div
+            class="places-grid"
+            id="placesContainer"
+        ></div>
+
 
     </div>
-
-
-
-    <!-- SEARCH -->
-
-    <div class="search-container">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search for a place..."
-            onkeyup="searchPlaces()"
-        >
-
-    </div>
-
-
-
-    <!-- CATEGORY FILTER -->
-
-    <div class="filter-container">
-
-
-        <button
-            onclick="filterCategory('All')"
-            class="filter-btn active"
-        >
-            All
-        </button>
-
-
-        <button
-            onclick="filterCategory('Beach')"
-            class="filter-btn"
-        >
-            Beach
-        </button>
-
-
-        <button
-            onclick="filterCategory('History')"
-            class="filter-btn"
-        >
-            History
-        </button>
-
-
-        <button
-            onclick="filterCategory('Temple')"
-            class="filter-btn"
-        >
-            Temple
-        </button>
-
-
-        <button
-            onclick="filterCategory('Nature')"
-            class="filter-btn"
-        >
-            Nature
-        </button>
-
-
-        <button
-            onclick="filterCategory('Museum')"
-            class="filter-btn"
-        >
-            Museum
-        </button>
-
-
-        <button
-            onclick="filterCategory('Shopping')"
-            class="filter-btn"
-        >
-            Shopping
-        </button>
-
-
-        <button
-            onclick="filterCategory('Culture')"
-            class="filter-btn"
-        >
-            Culture
-        </button>
-
-
-        <button
-            onclick="filterCategory('Church')"
-            class="filter-btn"
-        >
-            Church
-        </button>
-
-
-        <button
-            onclick="filterCategory('Education')"
-            class="filter-btn"
-        >
-            Education
-        </button>
-
-    </div>
-
-
-
-    <!-- A-Z -->
-
-    <div class="alphabet">
-
-        <button onclick="filterLetter('All')">All</button>
-
-        <button onclick="filterLetter('A')">A</button>
-        <button onclick="filterLetter('B')">B</button>
-        <button onclick="filterLetter('C')">C</button>
-        <button onclick="filterLetter('D')">D</button>
-        <button onclick="filterLetter('E')">E</button>
-        <button onclick="filterLetter('F')">F</button>
-        <button onclick="filterLetter('G')">G</button>
-        <button onclick="filterLetter('H')">H</button>
-        <button onclick="filterLetter('I')">I</button>
-        <button onclick="filterLetter('J')">J</button>
-        <button onclick="filterLetter('K')">K</button>
-        <button onclick="filterLetter('L')">L</button>
-        <button onclick="filterLetter('M')">M</button>
-        <button onclick="filterLetter('N')">N</button>
-        <button onclick="filterLetter('O')">O</button>
-        <button onclick="filterLetter('P')">P</button>
-        <button onclick="filterLetter('Q')">Q</button>
-        <button onclick="filterLetter('R')">R</button>
-        <button onclick="filterLetter('S')">S</button>
-        <button onclick="filterLetter('T')">T</button>
-        <button onclick="filterLetter('U')">U</button>
-        <button onclick="filterLetter('V')">V</button>
-        <button onclick="filterLetter('W')">W</button>
-        <button onclick="filterLetter('X')">X</button>
-        <button onclick="filterLetter('Y')">Y</button>
-        <button onclick="filterLetter('Z')">Z</button>
-
-    </div>
-
-
-
-    <div
-        id="placesContainer"
-        class="places-grid"
-    ></div>
 
 </section>
 
 
 
-<!-- ================= BUSINESS MODEL ================= -->
+<!-- =====================================================
+     BUSINESS MODEL
+===================================================== -->
 
 <section
     class="business-section"
     id="business"
 >
 
-    <div class="section-heading">
+    <h2>
+        Chennai Explorer Business Model
+    </h2>
 
-        <p class="section-label">
-            OUR BUSINESS
-        </p>
-
-
-        <h2>
-            Chennai Explorer Business Model
-        </h2>
-
-
-        <p>
-
-            Chennai Explorer is designed as a
-            digital tourism marketplace connecting
-            visitors with destinations, experiences
-            and local tourism businesses.
-
-        </p>
-
-    </div>
+    <p>
+        Chennai Explorer is designed as a digital
+        tourism marketplace connecting visitors with
+        destinations, experiences and local tourism
+        businesses.
+    </p>
 
 
 
@@ -418,20 +411,15 @@
 
         <div class="business-card">
 
-            <div class="business-icon">
-                👥
-            </div>
-
             <h3>
                 Target Customers
             </h3>
 
             <p>
-
-                Tourists, students, families,
-                local residents, working professionals
-                and visitors looking to explore Chennai.
-
+                Tourists, students, families, local
+                residents, business travellers and
+                visitors looking for places and
+                experiences in Chennai.
             </p>
 
         </div>
@@ -440,20 +428,15 @@
 
         <div class="business-card">
 
-            <div class="business-icon">
-                🏢
-            </div>
-
             <h3>
-                Business Partners
+                Value Proposition
             </h3>
 
             <p>
-
-                Hotels, restaurants, activity providers,
-                tour operators, local businesses and
-                experience providers.
-
+                One convenient digital platform where
+                users can discover Chennai attractions,
+                understand important information and
+                connect with tourism-related services.
             </p>
 
         </div>
@@ -462,20 +445,14 @@
 
         <div class="business-card">
 
-            <div class="business-icon">
-                🌐
-            </div>
-
             <h3>
-                Digital Platform
+                Key Partners
             </h3>
 
             <p>
-
-                A website that brings destination
-                information, local experiences and
-                future booking opportunities together.
-
+                Local tourism businesses, restaurants,
+                hotels, travel agencies, event organisers,
+                guides and experience providers.
             </p>
 
         </div>
@@ -484,20 +461,46 @@
 
         <div class="business-card">
 
-            <div class="business-icon">
-                🚀
-            </div>
-
             <h3>
-                Future Expansion
+                Key Activities
             </h3>
 
             <p>
+                Destination listing, content management,
+                tourism information, digital promotion,
+                customer support and platform maintenance.
+            </p>
 
-                The platform can later introduce
-                hotel bookings, activity reservations,
-                travel services and online payments.
+        </div>
 
+
+
+        <div class="business-card">
+
+            <h3>
+                Customer Relationship
+            </h3>
+
+            <p>
+                Simple navigation, useful information,
+                responsive support, reviews and
+                personalised recommendations.
+            </p>
+
+        </div>
+
+
+
+        <div class="business-card">
+
+            <h3>
+                Distribution Channels
+            </h3>
+
+            <p>
+                Website, mobile-friendly platform,
+                social media marketing, search engines
+                and partnerships with local businesses.
             </p>
 
         </div>
@@ -509,53 +512,43 @@
 
 
 
-<!-- ================= VISION MISSION ================= -->
+<!-- =====================================================
+     VISION & MISSION
+===================================================== -->
 
 <section class="vision-section">
 
+    <div class="vision-container">
 
-    <div class="vision-box">
 
-
-        <div>
-
-            <p class="section-label">
-                OUR VISION
-            </p>
+        <div class="vision-box">
 
             <h2>
-                Making Chennai easier to discover.
+                Our Vision
             </h2>
 
             <p>
-
-                To become a convenient digital platform
-                for discovering Chennai's destinations,
-                experiences and local attractions.
-
+                To become a convenient digital gateway
+                for discovering Chennai and promoting
+                its tourism, culture, heritage and
+                local experiences.
             </p>
 
         </div>
 
 
 
-        <div>
-
-            <p class="section-label">
-                OUR MISSION
-            </p>
+        <div class="vision-box">
 
             <h2>
-                Connecting people with Chennai.
+                Our Mission
             </h2>
 
             <p>
-
-                To provide organized and accessible
-                destination information while creating
-                opportunities for local tourism businesses
-                and service providers.
-
+                To provide users with accessible,
+                organised and reliable information
+                about Chennai while creating digital
+                opportunities for local tourism businesses.
             </p>
 
         </div>
@@ -567,32 +560,23 @@
 
 
 
-<!-- ================= REVENUE ================= -->
+<!-- =====================================================
+     REVENUE MODEL
+===================================================== -->
 
 <section
     class="revenue-section"
     id="revenue"
 >
 
-    <div class="section-heading">
+    <h2>
+        Revenue Model
+    </h2>
 
-        <p class="section-label">
-            BUSINESS STRATEGY
-        </p>
-
-        <h2>
-            Revenue Model
-        </h2>
-
-        <p>
-
-            Chennai Explorer can generate revenue
-            through multiple digital tourism and
-            partnership-based channels.
-
-        </p>
-
-    </div>
+    <p>
+        Chennai Explorer can generate revenue through
+        multiple digital tourism and e-commerce channels.
+    </p>
 
 
 
@@ -601,20 +585,14 @@
 
         <div class="revenue-card">
 
-            <span class="revenue-number">
-                01
-            </span>
-
             <h3>
                 Featured Listings
             </h3>
 
             <p>
-
-                Tourism businesses can pay to receive
-                enhanced visibility and featured
-                placement on the platform.
-
+                Tourism businesses can pay to promote
+                their attractions, services or experiences
+                on the platform.
             </p>
 
         </div>
@@ -623,21 +601,14 @@
 
         <div class="revenue-card">
 
-            <span class="revenue-number">
-                02
-            </span>
-
             <h3>
-                Booking Commission
+                Commission
             </h3>
 
             <p>
-
-                The platform can earn a commission
-                from eligible hotel, activity and
-                experience bookings generated through
-                partner businesses.
-
+                The platform can earn a commission from
+                bookings made through hotels, restaurants,
+                tours or experience providers.
             </p>
 
         </div>
@@ -646,62 +617,14 @@
 
         <div class="revenue-card">
 
-            <span class="revenue-number">
-                03
-            </span>
-
             <h3>
-                Affiliate Revenue
+                Advertising
             </h3>
 
             <p>
-
-                Revenue can be earned by referring
-                users to selected travel and tourism
-                services through affiliate partnerships.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="revenue-card">
-
-            <span class="revenue-number">
-                04
-            </span>
-
-            <h3>
-                Sponsored Places
-            </h3>
-
-            <p>
-
-                Local businesses can sponsor promotional
-                placements to reach relevant visitors.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="revenue-card">
-
-            <span class="revenue-number">
-                05
-            </span>
-
-            <h3>
-                Digital Advertising
-            </h3>
-
-            <p>
-
                 Relevant tourism businesses can advertise
-                products and services to users of the platform.
-
+                their products and services to platform
+                users.
             </p>
 
         </div>
@@ -710,20 +633,14 @@
 
         <div class="revenue-card">
 
-            <span class="revenue-number">
-                06
-            </span>
-
             <h3>
-                Premium Business Plans
+                Partnership Plans
             </h3>
 
             <p>
-
-                Businesses can subscribe to premium profiles
-                offering additional visibility and promotional
-                features.
-
+                Businesses can purchase premium partnership
+                packages for greater visibility and
+                promotional opportunities.
             </p>
 
         </div>
@@ -736,13 +653,12 @@
     <div class="revenue-note">
 
         <strong>
-            Current Status:
+            Future Revenue Opportunity:
         </strong>
 
-        Chennai Explorer is currently a website
-        prototype. The revenue streams shown above
-        represent the planned future business model
-        and are not currently processing real payments.
+        The platform can introduce premium travel
+        packages, guided experiences, event bookings
+        and affiliate partnerships as the business grows.
 
     </div>
 
@@ -750,57 +666,55 @@
 
 
 
-<!-- ================= SOFTWARE & HARDWARE ================= -->
+<!-- =====================================================
+     SOFTWARE & HARDWARE
+===================================================== -->
 
 <section class="technology-section">
 
-    <div class="section-heading">
-
-        <p class="section-label">
-            TECHNOLOGY
-        </p>
-
-        <h2>
-            Software & Hardware Considerations
-        </h2>
-
-    </div>
+    <h2>
+        Software &amp; Hardware Requirements
+    </h2>
 
 
 
-    <div class="technology-grid">
+    <div class="technology-container">
 
 
-        <div class="technology-card">
+        <div class="technology-box">
 
             <h3>
-                💻 Software
+                Software
             </h3>
 
             <ul>
 
                 <li>
-                    HTML – Website structure
+                    HTML5 for website structure
                 </li>
 
                 <li>
-                    CSS – Design and responsive layout
+                    CSS3 for website design
                 </li>
 
                 <li>
-                    JavaScript – Search, filters and interactions
+                    JavaScript for interactive features
                 </li>
 
                 <li>
-                    Visual Studio Code – Development environment
+                    Visual Studio Code for development
                 </li>
 
                 <li>
-                    GitHub – Version control and hosting
+                    GitHub for source-code management
                 </li>
 
                 <li>
-                    GitHub Pages – Website deployment
+                    GitHub Pages for website hosting
+                </li>
+
+                <li>
+                    Google Maps for location navigation
                 </li>
 
             </ul>
@@ -809,16 +723,20 @@
 
 
 
-        <div class="technology-card">
+        <div class="technology-box">
 
             <h3>
-                🖥️ Hardware
+                Hardware
             </h3>
 
             <ul>
 
                 <li>
-                    Laptop/Desktop computer
+                    Laptop or desktop computer
+                </li>
+
+                <li>
+                    Smartphone for mobile testing
                 </li>
 
                 <li>
@@ -826,15 +744,11 @@
                 </li>
 
                 <li>
-                    Web browser
+                    Cloud/server infrastructure
                 </li>
 
                 <li>
-                    Mobile devices for responsive testing
-                </li>
-
-                <li>
-                    Cloud/server infrastructure for future expansion
+                    Storage for website content and images
                 </li>
 
             </ul>
@@ -848,53 +762,39 @@
 
 
 
-<!-- ================= TAXATION ================= -->
+<!-- =====================================================
+     TAXATION
+===================================================== -->
 
 <section class="tax-section">
 
+    <h2>
+        Taxation &amp; Financial Compliance
+    </h2>
 
-    <div class="section-heading">
-
-        <p class="section-label">
-            COMPLIANCE
-        </p>
-
-        <h2>
-            Taxation & Financial Compliance
-        </h2>
-
-        <p>
-
-            As the platform develops into a commercial
-            marketplace, applicable tax and accounting
-            requirements will be incorporated into
-            its operations.
-
-        </p>
-
-    </div>
+    <p>
+        A commercial version of Chennai Explorer
+        would need appropriate financial and tax
+        compliance based on its business structure,
+        revenue model and applicable Indian regulations.
+    </p>
 
 
 
-    <div class="tax-grid">
+    <div class="tax-container">
 
 
         <div class="tax-card">
 
-            <div class="tax-icon">
-                🧾
-            </div>
-
             <h3>
-                GST Compliance
+                GST
             </h3>
 
             <p>
-
-                Applicable GST requirements will be assessed
-                based on the nature of services, commissions
-                and transactions conducted through the platform.
-
+                Applicable services and transactions
+                would need to follow GST registration,
+                invoicing and reporting requirements
+                wherever applicable.
             </p>
 
         </div>
@@ -903,19 +803,14 @@
 
         <div class="tax-card">
 
-            <div class="tax-icon">
-                📄
-            </div>
-
             <h3>
-                Proper Invoicing
+                Income Tax
             </h3>
 
             <p>
-
-                Appropriate invoices and transaction records
-                will be maintained for taxable business activities.
-
+                Business income would be accounted for
+                and reported according to the applicable
+                income-tax rules.
             </p>
 
         </div>
@@ -923,63 +818,19 @@
 
 
         <div class="tax-card">
-
-            <div class="tax-icon">
-                📊
-            </div>
 
             <h3>
                 Financial Records
             </h3>
 
             <p>
-
-                Revenue, commissions, expenses and applicable
-                taxes will be systematically recorded for
-                accounting purposes.
-
+                The platform would maintain appropriate
+                records of revenue, expenses, invoices,
+                commissions and other financial transactions.
             </p>
 
         </div>
 
-
-
-        <div class="tax-card">
-
-            <div class="tax-icon">
-                ⚖️
-            </div>
-
-            <h3>
-                Regulatory Compliance
-            </h3>
-
-            <p>
-
-                The business will review applicable Indian
-                tax, e-commerce and consumer-related
-                requirements as the platform expands.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="legal-note">
-
-        <strong>
-            Important:
-        </strong>
-
-        Actual tax treatment will depend on the final
-        business structure, services offered and
-        transaction model. Professional tax/accounting
-        advice will be obtained before launching
-        commercial operations.
 
     </div>
 
@@ -987,32 +838,24 @@
 
 
 
-<!-- ================= PRIVACY & SECURITY ================= -->
+<!-- =====================================================
+     PRIVACY & SECURITY
+===================================================== -->
 
 <section
     class="security-section"
     id="security"
 >
 
-    <div class="section-heading">
+    <h2>
+        Privacy &amp; Security
+    </h2>
 
-        <p class="section-label">
-            TRUST & SAFETY
-        </p>
-
-        <h2>
-            Privacy & Security
-        </h2>
-
-        <p>
-
-            Protecting customer information and maintaining
-            trust are important parts of Chennai Explorer's
-            future e-commerce operations.
-
-        </p>
-
-    </div>
+    <p>
+        User trust and protection of information are
+        important for a digital tourism e-commerce
+        platform.
+    </p>
 
 
 
@@ -1021,82 +864,15 @@
 
         <div class="security-card">
 
-            <div class="security-title">
+            <h3>
+                Data Privacy
+            </h3>
 
-                <span class="security-icon">
-                    🔐
-                </span>
-
-                <h3>
-                    Privacy Protection
-                </h3>
-
-            </div>
-
-
-            <ul>
-
-                <li>
-
-                    <strong>
-                        Minimal Data Collection:
-                    </strong>
-
-                    Collect only information necessary
-                    for the service.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Purpose Transparency:
-                    </strong>
-
-                    Explain why customer information
-                    is collected and used.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Data Protection:
-                    </strong>
-
-                    Protect personal information from
-                    unauthorized access.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        User Rights:
-                    </strong>
-
-                    Provide appropriate mechanisms for
-                    users to manage their personal information.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        No Unnecessary Sharing:
-                    </strong>
-
-                    Personal information will not be sold
-                    or shared without an appropriate legal
-                    or business basis.
-
-                </li>
-
-            </ul>
+            <p>
+                Collect only necessary user information
+                and clearly explain how information is
+                used.
+            </p>
 
         </div>
 
@@ -1104,123 +880,82 @@
 
         <div class="security-card">
 
-            <div class="security-title">
-
-                <span class="security-icon">
-                    🛡️
-                </span>
-
-                <h3>
-                    Website Security
-                </h3>
-
-            </div>
-
-
-            <ul>
-
-                <li>
-
-                    <strong>
-                        HTTPS:
-                    </strong>
-
-                    Secure encrypted communication
-                    for the website.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Secure Authentication:
-                    </strong>
-
-                    Future customer accounts will use
-                    secure authentication mechanisms.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Password Protection:
-                    </strong>
-
-                    Passwords will be securely hashed
-                    rather than stored in plain text.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Secure Payments:
-                    </strong>
-
-                    Future payments will use trusted
-                    payment gateways instead of storing
-                    card information directly.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Input Validation:
-                    </strong>
-
-                    User inputs will be validated to reduce
-                    common security risks.
-
-                </li>
-
-
-                <li>
-
-                    <strong>
-                        Backups:
-                    </strong>
-
-                    Important business data will be backed
-                    up regularly.
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="security-badge">
-
-        <span>
-            🔒
-        </span>
-
-        <div>
-
-            <strong>
-                Security by Design
-            </strong>
+            <h3>
+                Secure Payments
+            </h3>
 
             <p>
-
-                Privacy and security will be considered
-                throughout the development and operation
-                of the platform.
-
+                A commercial platform should use trusted
+                payment gateways and secure payment
+                processing methods.
             </p>
 
         </div>
+
+
+
+        <div class="security-card">
+
+            <h3>
+                Account Security
+            </h3>
+
+            <p>
+                User accounts should use secure passwords,
+                authentication controls and appropriate
+                access management.
+            </p>
+
+        </div>
+
+
+
+        <div class="security-card">
+
+            <h3>
+                Website Security
+            </h3>
+
+            <p>
+                HTTPS, secure coding practices, regular
+                updates and protection against common
+                web attacks should be implemented.
+            </p>
+
+        </div>
+
+
+
+        <div class="security-card">
+
+            <h3>
+                Data Protection
+            </h3>
+
+            <p>
+                Personal and business information should
+                be protected from unauthorised access,
+                alteration or disclosure.
+            </p>
+
+        </div>
+
+
+
+        <div class="security-card">
+
+            <h3>
+                User Awareness
+            </h3>
+
+            <p>
+                Users should be provided with clear
+                privacy information, terms of use and
+                safe online transaction guidance.
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1228,150 +963,92 @@
 
 
 
-<!-- ================= SYSTEMATIC APPROACH ================= -->
+<!-- =====================================================
+     SYSTEMATIC PLANNING & DESIGN
+===================================================== -->
 
 <section class="process-section">
 
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            DEVELOPMENT PROCESS
-        </p>
-
-        <h2>
-            Systematic Planning & Design Approach
-        </h2>
-
-    </div>
+    <h2>
+        Systematic Planning &amp; Design
+    </h2>
 
 
 
-    <div class="process">
+    <div class="process-grid">
 
 
-        <div class="process-step">
+        <div class="process-card">
 
-            <span>
-                01
-            </span>
+            <div class="process-number">
+                1
+            </div>
 
             <h3>
-                Identify the Problem
+                Planning
             </h3>
 
             <p>
-
-                Identify the need for an organized
-                digital platform for discovering Chennai.
-
+                Identify target users, business objectives,
+                tourism categories and required features.
             </p>
 
         </div>
 
 
 
-        <div class="process-step">
+        <div class="process-card">
 
-            <span>
-                02
-            </span>
+            <div class="process-number">
+                2
+            </div>
 
             <h3>
-                Identify Users
+                Design
             </h3>
 
             <p>
-
-                Define tourists, residents, students,
-                families and visitors as target users.
-
+                Create the website structure, navigation,
+                visual layout and user experience.
             </p>
 
         </div>
 
 
 
-        <div class="process-step">
+        <div class="process-card">
 
-            <span>
-                03
-            </span>
+            <div class="process-number">
+                3
+            </div>
 
             <h3>
-                Plan the Structure
+                Development
             </h3>
 
             <p>
-
-                Organize destinations, categories,
-                search, information pages and
-                business sections.
-
+                Develop the website using HTML, CSS and
+                JavaScript and connect the required
+                features.
             </p>
 
         </div>
 
 
 
-        <div class="process-step">
+        <div class="process-card">
 
-            <span>
-                04
-            </span>
+            <div class="process-number">
+                4
+            </div>
 
             <h3>
-                Design the Interface
+                Testing
             </h3>
 
             <p>
-
-                Create a simple, attractive and
-                responsive user interface.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-step">
-
-            <span>
-                05
-            </span>
-
-            <h3>
-                Develop
-            </h3>
-
-            <p>
-
-                Build the website using HTML,
-                CSS and JavaScript.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-step">
-
-            <span>
-                06
-            </span>
-
-            <h3>
-                Test & Publish
-            </h3>
-
-            <p>
-
-                Test search, filters, links and
-                responsiveness, then publish
-                using GitHub Pages.
-
+                Test navigation, search, filters, images,
+                responsiveness, links and user interaction.
             </p>
 
         </div>
@@ -1383,83 +1060,41 @@
 
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section
     class="about-section"
     id="about"
 >
 
-    <div class="about-content">
-
-        <p class="section-label">
-            ABOUT CHENNAI EXPLORER
-        </p>
-
+    <div class="about-container">
 
         <h2>
-            A Digital Gateway to Chennai
+            About Chennai Explorer
         </h2>
 
-
         <p>
-
-            Chennai Explorer is an e-commerce tourism
-            platform concept developed to make Chennai's
-            destinations easier to discover through a
-            simple digital experience.
-
+            Chennai Explorer is an academic e-commerce
+            business concept focused on digital tourism.
+            The platform combines destination discovery
+            with opportunities for local tourism businesses
+            to reach potential customers.
         </p>
 
-
         <p>
-
-            The current version focuses on destination
-            discovery and information. Future versions
-            can expand into a complete tourism marketplace
-            with bookings, local experiences, partner
-            businesses and secure online payments.
-
+            The project demonstrates how a simple web-based
+            platform can combine business planning,
+            technology, digital marketing, revenue generation,
+            privacy and security considerations.
         </p>
 
-
-
-        <div class="future-box">
-
-            <strong>
-                Future Possibilities
-            </strong>
-
-
-            <div class="future-items">
-
-                <span>
-                    🏨 Hotel Bookings
-                </span>
-
-                <span>
-                    🎟️ Experience Tickets
-                </span>
-
-                <span>
-                    🚕 Travel Services
-                </span>
-
-                <span>
-                    💳 Online Payments
-                </span>
-
-                <span>
-                    ⭐ Reviews & Ratings
-                </span>
-
-                <span>
-                    🤝 Local Business Partnerships
-                </span>
-
-            </div>
-
-        </div>
+        <p>
+            Future versions could include online bookings,
+            user accounts, reviews, personalised recommendations,
+            travel packages and mobile applications.
+        </p>
 
     </div>
 
@@ -1467,70 +1102,45 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
+    <p>
+        <strong>Chennai Explorer</strong>
+    </p>
 
-    <div class="footer-content">
+    <p>
+        Discover Chennai. Explore. Experience.
+    </p>
 
-
-        <div>
-
-            <h3>
-                Chennai Explorer
-            </h3>
-
-            <p>
-                Discover Chennai. Explore more.
-            </p>
-
-        </div>
-
-
-
-        <div>
-
-            <p>
-                E-Commerce Project – UCOM 505
-            </p>
-
-            <p>
-                Sri Sathya Sai Institute of Higher Learning
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Chennai Explorer. Academic Project.
-        </p>
-
-    </div>
+    <p class="copyright">
+        © 2026 Chennai Explorer. Academic E-Commerce Project.
+    </p>
 
 </footer>
 
 
 
-<!-- ================= PLACE MODAL ================= -->
+<!-- =====================================================
+     PLACE DETAILS MODAL
+===================================================== -->
 
 <div
-    id="placeModal"
     class="modal"
+    id="placeModal"
 >
+
 
     <div class="modal-content">
 
 
         <button
-            class="close-btn"
+            class="modal-close"
             onclick="closeModal()"
+            aria-label="Close"
         >
             ×
         </button>
@@ -1538,6 +1148,7 @@
 
         <img
             id="modalImage"
+            class="modal-image"
             src=""
             alt="Place"
         >
@@ -1545,47 +1156,71 @@
 
         <div class="modal-body">
 
+
             <span
                 id="modalCategory"
                 class="modal-category"
             ></span>
 
 
-            <h2 id="modalTitle"></h2>
+            <h2 id="modalTitle">
+                Place Name
+            </h2>
 
 
-            <p id="modalAddress"></p>
+            <p
+                id="modalAddress"
+                class="modal-address"
+            ></p>
 
 
-            <h3>
-                History
-            </h3>
 
-            <p id="modalHistory"></p>
+            <div class="modal-section">
 
+                <h3>
+                    History
+                </h3>
 
-            <h3>
-                Unique Feature
-            </h3>
+                <p id="modalHistory"></p>
 
-            <p id="modalFeature"></p>
+            </div>
 
 
-            <h3>
-                Things to Do
-            </h3>
 
-            <p id="modalThings"></p>
+            <div class="modal-section">
+
+                <h3>
+                    Main Feature
+                </h3>
+
+                <p id="modalFeature"></p>
+
+            </div>
+
+
+
+            <div class="modal-section">
+
+                <h3>
+                    Things to Do
+                </h3>
+
+                <p id="modalThings"></p>
+
+            </div>
+
 
 
             <a
                 id="modalMap"
+                class="map-button"
                 href="#"
                 target="_blank"
-                class="map-btn"
+                rel="noopener noreferrer"
             >
                 📍 Open in Google Maps
             </a>
+
 
         </div>
 
@@ -1595,11 +1230,13 @@
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
-<script src="places.js"></script>
+<script src="./places.js"></script>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 
 </body>
